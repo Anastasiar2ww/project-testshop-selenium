@@ -5,8 +5,8 @@ def test_add_to_cart(product_card_page):
 
 def test_link_terms(product_card_page):
     product_card_page.open_page()
-    product_card_page.check_link_href()
+    product_card_page.check_terms_in_link_href()
 
 def test_increase_count_products(product_card_page):
     product_card_page.open_page()
-    product_card_page.check_increase_count()
+    product_card_page.check_increase_count(2)

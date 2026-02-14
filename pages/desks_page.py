@@ -13,7 +13,7 @@ class DesksPage(BasePage):
         cart_icon = self.find(loc.cart_icon_loc)
         cart_icon.is_enabled()
 
-    def check_count_of_elements_legs(self):
+    def check_count_of_elements_legs(self, expected_elements):
         elements = self.find(loc.elements_legs_loc)
         form_checks = elements.find_elements(*loc.form_checks_loc)
-        assert len(form_checks) == 3
+        assert len(form_checks) == expected_elements
