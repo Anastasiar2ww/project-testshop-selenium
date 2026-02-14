@@ -14,16 +14,17 @@ class ProductCardPage(BasePage):
         toast_test = self.get_text(loc.toast_text_loc)
         assert toast_test == 'Item(s) added to your cart'
 
-    def check_link_href(self):
+    def check_terms_in_link_href(self):
         link = self.find(loc.link_loc)
         href = link.get_attribute("href")
         assert "/terms" in href
 
-    def check_increase_count(self):
+    def check_increase_count(self, expected_count: int):
+        expected = str(expected_count)
         increase_count = self.find(loc.btn_increase_loc)
         increase_count.click()
 
-        self.wait_for_value_in_element(loc.quantity_form_loc, '2', timeout=5)
+        self.wait_for_value_in_element(loc.quantity_form_loc, expected, timeout=5)
         value = self.find(loc.quantity_form_loc).get_attribute('value')
 
-        assert value == '2'
+        assert value == expected
