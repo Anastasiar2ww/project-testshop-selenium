@@ -1,4 +1,3 @@
-yaml
 name: Python autotests
 
 on: 
@@ -78,15 +77,14 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: allure-report
-          path: allure-report
+          name: _site                    
+          path: _site                    
 
       - name: Upload pages artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: allure-report
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-    
