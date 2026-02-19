@@ -1,7 +1,10 @@
+import pytest
+
 def test_breadcrumbs_text(desks_page):
     desks_page.open_page()
     desks_page.check_breadcrumbs_text('Desks')
 
+@pytest.mark.extended
 def test_cart_icon_enable(desks_page):
     desks_page.open_page()
     desks_page.check_cart_icon_enable()
