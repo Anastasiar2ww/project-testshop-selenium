@@ -11,7 +11,7 @@
 - Selenium
 - Pytest
 - Page Object Model (POM)
-- Allure для отчетовв
+- Allure для отчетов
 ---
 
 # Установка зависимости
