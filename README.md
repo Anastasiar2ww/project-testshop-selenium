@@ -1,6 +1,6 @@
 # project-testshop-selenium
 
-Учебный проект, в котором показано, как реализовать UI-тесты на Selenium в Python
+Пример реализации UI-автотестов на Selenium + Python с использованием Page Object Model
 
 Тестируемый ресурс: http://testshop.qa-practice.com/
 
